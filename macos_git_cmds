@@ -11,4 +11,8 @@ Host *
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519
 
-  git access token - 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
+  git access token - ghp_zo4QSKs27s7UPMNBDnaY9YIN76IOEs48gdo
+
+git merge <branch_name_of_branch_from which I want to rebase my branch>
+
+git rebase <branch_name_of_branch_from which I want to rebase my branch>
