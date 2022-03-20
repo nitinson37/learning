@@ -12,6 +12,7 @@ Host *
   IdentityFile ~/.ssh/id_ed25519
 
   git access token - ghp_zo4QSKs27s7UPMNBDnaY9YIN76IOEs48gdo
+  intellij token - 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
 
 git merge <branch_name_of_branch_from which I want to rebase my branch>
 
