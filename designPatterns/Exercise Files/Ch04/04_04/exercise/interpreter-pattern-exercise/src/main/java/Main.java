@@ -4,7 +4,7 @@ public class Main {
 
     String context = "this is a a sentence";
 
-    // Interpret the sentence here
+    context = new FirstLetterLowerCaseExpression().interpret(context);
 
     System.out.println(context);
 
