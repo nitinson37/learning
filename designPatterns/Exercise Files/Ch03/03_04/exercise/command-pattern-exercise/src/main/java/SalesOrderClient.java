@@ -7,8 +7,8 @@ public class SalesOrderClient {
     OrderHandler placeOrderHandler = new OrderHandler();
     OrderHandler returnOrderHandler = new OrderHandler();
 
-    placeOrderHandler.invoke();
-    returnOrderHandler.invoke();
+    placeOrderHandler.invoke(new PlaceOrder(jacket));
+    returnOrderHandler.invoke(new ReturnOrder(jacket));
 
 
   }
