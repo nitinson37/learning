@@ -1,4 +1,4 @@
-package com.frankmoley.lil.learningspring.util;
+package com.nitinson.lil.learningspring.util;
 
 import java.text.DateFormat;
 import java.text.ParseException;

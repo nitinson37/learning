@@ -1,21 +1,23 @@
-package com.frankmoley.lil.learningspring.util;
+package com.nitinson.lil.learningspring.util;
 
 import java.util.Date;
 import java.util.List;
 
-import com.frankmoley.lil.learningspring.business.ReservationService;
-import com.frankmoley.lil.learningspring.business.RoomReservation;
-import com.frankmoley.lil.learningspring.data.Guest;
-import com.frankmoley.lil.learningspring.data.Reservation;
-import com.frankmoley.lil.learningspring.data.Room;
+import com.nitinson.lil.learningspring.business.ReservationService;
+import com.nitinson.lil.learningspring.business.RoomReservation;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
 @Component
 public class AppStartupEvent implements ApplicationListener<ApplicationReadyEvent> {
-    private ReservationService reservationService;
-    private DateUtils dateUtils;
+    private final ReservationService reservationService;
+    private final DateUtils dateUtils;
+
+    public AppStartupEvent(ReservationService reservationService, DateUtils dateUtils) {
+        this.reservationService = reservationService;
+        this.dateUtils = dateUtils;
+    }
 
 
     @Override
