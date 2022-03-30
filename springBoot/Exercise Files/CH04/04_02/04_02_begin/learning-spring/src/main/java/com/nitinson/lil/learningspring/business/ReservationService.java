@@ -1,4 +1,4 @@
-package com.frankmoley.lil.learningspring.business;
+package com.nitinson.lil.learningspring.business;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -7,13 +7,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.frankmoley.lil.learningspring.data.Guest;
-import com.frankmoley.lil.learningspring.data.GuestRepository;
-import com.frankmoley.lil.learningspring.data.Reservation;
-import com.frankmoley.lil.learningspring.data.ReservationRepository;
-import com.frankmoley.lil.learningspring.data.Room;
-import com.frankmoley.lil.learningspring.data.RoomRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.nitinson.lil.learningspring.data.Guest;
+import com.nitinson.lil.learningspring.data.GuestRepository;
+import com.nitinson.lil.learningspring.data.Reservation;
+import com.nitinson.lil.learningspring.data.ReservationRepository;
+import com.nitinson.lil.learningspring.data.Room;
+import com.nitinson.lil.learningspring.data.RoomRepository;
 import org.springframework.stereotype.Service;
 
 @Service

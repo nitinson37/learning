@@ -1,4 +1,4 @@
-package com.frankmoley.lil.learningspring.data;
+package com.nitinson.lil.learningspring.data;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

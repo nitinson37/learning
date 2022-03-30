@@ -1,4 +1,4 @@
-package com.frankmoley.lil.learningspring.business;
+package com.nitinson.lil.learningspring.business;
 
 import java.util.Date;
 

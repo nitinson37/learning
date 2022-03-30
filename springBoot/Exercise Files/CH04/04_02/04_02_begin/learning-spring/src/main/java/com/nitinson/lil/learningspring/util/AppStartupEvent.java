@@ -1,10 +1,10 @@
-package com.frankmoley.lil.learningspring.util;
+package com.nitinson.lil.learningspring.util;
 
 import java.util.Date;
 import java.util.List;
 
-import com.frankmoley.lil.learningspring.business.ReservationService;
-import com.frankmoley.lil.learningspring.business.RoomReservation;
+import com.nitinson.lil.learningspring.business.ReservationService;
+import com.nitinson.lil.learningspring.business.RoomReservation;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;

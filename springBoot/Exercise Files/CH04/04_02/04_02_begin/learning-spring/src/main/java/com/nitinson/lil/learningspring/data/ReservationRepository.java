@@ -1,4 +1,4 @@
-package com.frankmoley.lil.learningspring.data;
+package com.nitinson.lil.learningspring.data;
 
 import java.sql.Date;
 
