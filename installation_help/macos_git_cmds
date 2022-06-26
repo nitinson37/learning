@@ -1,0 +1,19 @@
+ssh-keygen -t ed25519 -C "nitin037@yahoo.com"
+
+eval "$(ssh-agent -s)"
+
+ssh-add -K ~/.ssh/id_ed25519
+
+touch ~/.ssh.config
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+
+  git access token - ghp_zo4QSKs27s7UPMNBDnaY9YIN76IOEs48gdo
+  intellij token - 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
+
+git merge <branch_name_of_branch_from which I want to rebase my branch>
+
+git rebase <branch_name_of_branch_from which I want to rebase my branch>

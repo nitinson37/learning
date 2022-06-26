@@ -1,0 +1,11 @@
+MYSQL installation
+
+- brew install mysql
+- brew services start mysql
+- mysql_secure_installation //to set password
+- brew services stop mysql
+- mysql.server start //to start mysql
+- mysql -u root -p //password
+- CREATE DATABASE test;
+- CREATE USER 'dbuser'@'localhost' IDENTIFIED BY 'DbPass123!';
+- GRANT ALL PRIVILEGES ON test.* TO 'dbuser'@'localhost';
