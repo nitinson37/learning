@@ -1,30 +1,41 @@
 package com.nitinson.urlshortener.controller;
 
+import com.nitinson.urlshortener.entity.Redirect;
+import com.nitinson.urlshortener.request.RedirectCreationRequest;
+import com.nitinson.urlshortener.service.RedirectService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
 @RestController
+@RequestMapping("urlshorten")
 public class RedirectController {
 
-    @GetMapping("/{id}")
-    public ResponseEntity<?> handleRedirect(@PathVariable String id) throws URISyntaxException {
-        URI uri = new URI("http://google.com");
+    private RedirectService redirectService;
+
+    @Autowired
+    public RedirectController(RedirectService redirectService) {
+        this.redirectService = redirectService;
+    }
+
+    @GetMapping("/{alias}")
+    public ResponseEntity<?> handleRedirect(@PathVariable String alias) throws URISyntaxException {
+        Redirect redirect = redirectService.getRedirect(alias);
+        System.out.println("Redirecting here -> " + redirect);
+        URI uri = new URI(redirect.getUrl());
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setLocation(uri);
-
         return new ResponseEntity<>(httpHeaders, HttpStatus.MOVED_PERMANENTLY);
     }
 
-    @PostMapping("/{id}")
-    public ResponseEntity<?> createRedirect(@PathVariable String id){
-        return null;
+    @PostMapping
+    public ResponseEntity<?> createRedirect(@Valid @RequestBody RedirectCreationRequest redirectCreationRequest){
+        return ResponseEntity.ok(redirectService.createRedirect(redirectCreationRequest));
     }
 }
